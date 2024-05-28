@@ -8,4 +8,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Flurl.Http" Version="4.0.2" />
+    <PackageReference Include="RestSharp" Version="111.1.0" />
+  </ItemGroup>
+
 </Project>

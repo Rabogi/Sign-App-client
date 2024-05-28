@@ -37,6 +37,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[111.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

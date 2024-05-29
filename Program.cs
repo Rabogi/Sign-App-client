@@ -1,30 +1,14 @@
-﻿using RestSharp;
-using System.Net;
+﻿namespace Sign_App_client;
 
 class Program
-{
-    
-    static int Main()
+{   
+    static string serverhost = "10.147.17.103";
+    static string serverport = "5141";
+    static async Task<int> Main()
     {   
-        string serverhost = "10.147.17.103";
-        string serverport = "5141";
-        // var options = new RestClientOptions(serverhost + ":" + serverport);
-        // var client = new RestClient();
-        // var request = new RestRequest("weatherforecast");
-
-        var url = serverhost + ":" + serverport + "/weatherforecast";
-
-        var response = "";
-
-        using (var wb = new WebClient())
-        {
-           response = wb.DownloadString("http://10.147.17.103:5141/weatherforecast");
-        }
-
-        
-
-        Console.WriteLine(response);
-
+        HttpHandler handler = new HttpHandler(serverhost,serverport,false);
+        Console.WriteLine(await handler.GetString("/weatherforecast"));
+        Console.WriteLine(await handler.PostString("/hash256","test"));
         return 0;
     }
 }

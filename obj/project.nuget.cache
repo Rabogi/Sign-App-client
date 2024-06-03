@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8vunbB9yzP4raWE5/YqJVgIdCmcpSVYqaonuThxOfwQiaCxOG79k/zyezjW+0c6jJrDW9j9/ttK8n/wbveMhQQ==",
+  "dgSpecHash": "TwrWw4yNxRAGdL0puTMjeBsujA/FF510+EfIMPmXwaNM1WOhiwpRcuImMKYyfF3bmldr8YPTYo3n1Cel3abikw==",
   "success": true,
   "projectFilePath": "/root/gits/Sign-App-client/Sign-App-client.csproj",
   "expectedPackageFiles": [
     "/root/.nuget/packages/flurl/4.0.0/flurl.4.0.0.nupkg.sha512",
     "/root/.nuget/packages/flurl.http/4.0.2/flurl.http.4.0.2.nupkg.sha512",
+    "/root/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/root/.nuget/packages/restsharp/111.1.0/restsharp.111.1.0.nupkg.sha512"
   ],
   "logs": []

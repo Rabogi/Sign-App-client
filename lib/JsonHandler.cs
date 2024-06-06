@@ -1,7 +1,7 @@
 using System.Text.Json.Nodes;
 using Flurl.Util;
 
-namespace Sign_App_client;
+namespace Sign_App_server;
 
 public abstract class JsonHandler
 {
@@ -11,5 +11,16 @@ public abstract class JsonHandler
             json.Add(item.Key,item.Value);
         }
         return json;
+    }
+
+    public static string MakeJson(Dictionary<string,object> data){
+        string res = "{";
+        foreach (var item in data){
+            res += "\n\t\"" + item.Key + "\"" + ":" + "\"" + item.Value + "\",";
+        }
+        res = res.Remove(res.Length-1);
+        res += "\n}";
+        File.WriteAllText("./test.json",res);
+        return res;
     }
 }

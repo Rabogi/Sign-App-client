@@ -1,0 +1,5 @@
+db.users admin super_admin_password 0
+0 admin lvl
+1 user lvl
+
+INSERT INTO `SignAppDB`.`users` (`id`, `username`, `password`, `level`) VALUES ('0', 'admin', '92B9FFE9213FA0C1DC17DB758479A4588D9C659CDAE4D7E0B5BBA4C4C8E9FB70', '0');

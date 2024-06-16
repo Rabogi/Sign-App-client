@@ -1,8 +1,5 @@
 {
-	"storagePath":"./storage/",
-	"unsafeMode":"true",
-	"SQLserverIP":"localhost",
-	"SQLusername":"SignAppServer",
-	"SQLpassword":"password",
-	"SQLdatabase":"SignAppDB"
+	"Key":"AF784DC53D84A7434DF55646CD2231A01B9C66F3D98FA71E0A8F526E087B41E5",
+	"Username":"admin",
+	"Password":"super_admin_password"
 }

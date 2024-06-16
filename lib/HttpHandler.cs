@@ -45,7 +45,7 @@ public class HttpHandler
         return Result;
     }
 
-    public async Task<string> UploadFile(string where, List<string> filenames){
+    public async Task<string> UploadFile(string where, List<string> filenames,string key){
         var FormContent = new MultipartFormDataContent();
 
         foreach(string filename in filenames){
@@ -53,6 +53,7 @@ public class HttpHandler
             string fname = ClearFileName(filename);
             FormContent.Add(content,name:fname,fileName:fname);
         }
+        FormContent.Add(new StringContent(key),"key");
         var response = await httpClient.PostAsync(this.serverHost+where, FormContent);
         return await response.Content.ReadAsStringAsync();
     }
@@ -66,6 +67,6 @@ public class HttpHandler
             await file.CopyToAsync(fileStream);
         }
 
-        return "Succ";
+        return "Success";
     }
 }
